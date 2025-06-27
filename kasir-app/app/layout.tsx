@@ -7,9 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "NexusPOS - Aplikasi Kasir",
+  title: "LIL-AMR - Aplikasi Kasir",
   description: "Aplikasi kasir modern dengan antarmuka yang mudah digunakan",
-    generator: 'v0.dev'
+    generator: 'lil-amr'
 }
 
 export default function RootLayout({

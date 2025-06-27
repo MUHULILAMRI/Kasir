@@ -33,10 +33,10 @@ import { useToast } from "@/components/toast-notification"
 export default function SettingsPage() {
   const [settings, setSettings] = useState({
     // Store Settings
-    storeName: "AlfaPOS Store",
-    storeAddress: "Jl. Raya No. 123, Jakarta",
-    storePhone: "021-12345678",
-    storeEmail: "store@alfapos.com",
+    storeName: "LIL-AMR Store",
+    storeAddress: "Jl. Raya Bulukumba",
+    storePhone: "0882020878741",
+    storeEmail: "muhulila648@gmail.com",
 
     // Receipt Settings
     receiptHeader: "Terima kasih telah berbelanja",
@@ -74,7 +74,7 @@ export default function SettingsPage() {
   const { logs, logSettingChange, logBulkChange, exportLogs } = useAuditLog()
 
   useEffect(() => {
-    const savedSettings = localStorage.getItem("alfapos_settings")
+    const savedSettings = localStorage.getItem("LIL-AMR_settings")
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings)
       setSettings(parsed)
@@ -120,10 +120,10 @@ export default function SettingsPage() {
     if (confirm("Apakah Anda yakin ingin mengembalikan pengaturan ke default?")) {
       const defaultSettings = {
         // Store Settings
-        storeName: "AlfaPOS Store",
-        storeAddress: "Jl. Raya No. 123, Jakarta",
-        storePhone: "021-12345678",
-        storeEmail: "store@alfapos.com",
+        storeName: "LIL-AMR",
+        storeAddress: "Jl. Raya Bulukumba",
+        storePhone: "0882020878741",
+        storeEmail: "muhulila648@gmail.com",
 
         // Receipt Settings
         receiptHeader: "Terima kasih telah berbelanja",
@@ -180,7 +180,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(dataBlob)
     const link = document.createElement("a")
     link.href = url
-    link.download = `alfapos-settings-${new Date().toISOString().split("T")[0]}.json`
+    link.download = `LIL-AMR-settings-${new Date().toISOString().split("T")[0]}.json`
     link.click()
     URL.revokeObjectURL(url)
 
